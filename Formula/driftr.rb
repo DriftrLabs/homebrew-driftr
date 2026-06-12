@@ -5,21 +5,21 @@
 class Driftr < Formula
   desc "Fast JavaScript toolchain versioning without the friction"
   homepage "https://github.com/DriftrLabs/driftr"
-  version "0.8.2"
+  version "0.9.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/DriftrLabs/Driftr/releases/download/v0.8.2/driftr_0.8.2_darwin_amd64.tar.gz"
-      sha256 "9d49651d4c9b7c9b0cd7bc9d4eab11d57b54e63d53c90304f7024418c47579ca"
+      url "https://github.com/DriftrLabs/Driftr/releases/download/v0.9.0/driftr_0.9.0_darwin_amd64.tar.gz"
+      sha256 "d43663df56fe53798600ca718088f7a82f4de6771ba2753b5a10922207cd9456"
 
       define_method(:install) do
         bin.install "driftr"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/DriftrLabs/Driftr/releases/download/v0.8.2/driftr_0.8.2_darwin_arm64.tar.gz"
-      sha256 "b3204338fe5a79df329ded072166d91c50255708597247ad9745670b45ff729a"
+      url "https://github.com/DriftrLabs/Driftr/releases/download/v0.9.0/driftr_0.9.0_darwin_arm64.tar.gz"
+      sha256 "d85695709d8dbc9c1f00effd9551d4355b60ea6add069764317221aa8672b0cc"
 
       define_method(:install) do
         bin.install "driftr"
@@ -29,15 +29,15 @@ class Driftr < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/DriftrLabs/Driftr/releases/download/v0.8.2/driftr_0.8.2_linux_amd64.tar.gz"
-      sha256 "d4370c603d6e083fcd59bc65f1e759a2ef8a4369671f72c596830c89b517c456"
+      url "https://github.com/DriftrLabs/Driftr/releases/download/v0.9.0/driftr_0.9.0_linux_amd64.tar.gz"
+      sha256 "9675e7a857ef283caf23a50f41000a3fbd33803fb1541759a8eb7a5acf236a48"
       define_method(:install) do
         bin.install "driftr"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/DriftrLabs/Driftr/releases/download/v0.8.2/driftr_0.8.2_linux_arm64.tar.gz"
-      sha256 "697fdae918db0415369764dbf9645b7da490548d4db6102c74ccfc2dda04978a"
+      url "https://github.com/DriftrLabs/Driftr/releases/download/v0.9.0/driftr_0.9.0_linux_arm64.tar.gz"
+      sha256 "8018f90750dcd76da45923acd82a060e26917fedb665546cccb5c9e4e8ee941c"
       define_method(:install) do
         bin.install "driftr"
       end
@@ -51,7 +51,7 @@ class Driftr < Formula
 
       Add ~/.driftr/bin to the FRONT of your PATH (before Homebrew):
         echo 'export PATH="$HOME/.driftr/bin:$PATH"' >> ~/.zshenv
-        echo 'export PATH="$HOME/.driftr/bin:$PATH"' >> ~/.zprofile
+        echo 'export PATH="$HOME/.driftr/bin:$PATH"' >> ~/.zshrc
 
       Or run `driftr doctor --fix` to configure PATH automatically.
     EOS
